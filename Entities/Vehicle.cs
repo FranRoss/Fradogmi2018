@@ -5,7 +5,8 @@ namespace Fradogmi2018.Entities
 {
     public enum VechicleStatus {
         Free, 
-        Busy
+        Busy, 
+        Transfer
     }
     public class Vehicle
     {
@@ -13,6 +14,8 @@ namespace Fradogmi2018.Entities
         public VechicleStatus Status { get; set; } = VechicleStatus.Free;
         public int PositionX { get; set; } = 0;  
         public int PositionY { get; set; } = 0;
+        public int RemainingSteps { get; set; } = 0;
+
         public List<int> RidesToDo;
 
         public Vehicle(int id, int positionX, int positionY) {

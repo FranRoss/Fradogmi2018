@@ -49,6 +49,9 @@ namespace Fradogmi2018.Entities
             }
 
             ridesList = ridesList.OrderBy(e => e.BestStart).ToArray();
+
+            status.rides = ridesList;
+            status.vehicles = vehiclesList;
         }
 
     }

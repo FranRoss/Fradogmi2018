@@ -18,14 +18,15 @@ namespace Fradogmi2018.Managers
                     if(vehicle.Status==VechicleStatus.Free){
                         foreach (var ride in model.ridesList)
                         {
-                        var diffx= vehicle.PositionX - ride.StartY;
-                            var diffy = vehicle.PositionY - ride.StartY;
+                        var diffx= vehicle.PositionX - ride.StartX;
+                        var diffy = vehicle.PositionY - ride.StartY;
 
                         var diffridex = ride.StartX - ride.StartY;
                         var diffridey = ride.EndX - ride.EndY;
-                        var distanceRide = diffridex - diffridey;
+                        var distanceRide = diffridex +diffridey;
 
-                                var distance = diffx + diffy;
+                        var distance = diffx + diffy;
+
                         if (distance + i < ride.BestStart)                         
                             list.Add(new OutputManagerData(vehicle, ride));
                                 
