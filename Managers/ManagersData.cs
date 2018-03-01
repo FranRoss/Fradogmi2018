@@ -49,7 +49,7 @@ namespace Fradogmi2018.Managers
 
                             var distance = diffx + diffy;
 
-                            if ((distance + i ) < newsRides.BestStart)
+                            if ((distance + i ) < (newsRides.BestStart-1))
                             {
                                 list.Add(new OutputManagerData(vehicle, newsRides));
                                 flag = true;
@@ -66,5 +66,10 @@ namespace Fradogmi2018.Managers
             }
             change.UpdateStatus(i,model.status,list);
         }
+
+
+       
+
+
     }
 }
