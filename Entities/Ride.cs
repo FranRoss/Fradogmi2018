@@ -11,7 +11,7 @@ namespace Fradogmi2018.Entities {
     public int EndX;
     public int EndY;
 
-    Ride(int id, int bestStart, int maxEnd, int startX, int startY, int endX, int endY) {
+    public Ride(int id, int bestStart, int maxEnd, int startX, int startY, int endX, int endY) {
       Id = id;
       BestStart = bestStart;
       MaxEnd = maxEnd;
