@@ -16,22 +16,22 @@ namespace Fradogmi2018.Output
 
         public void WriteSolution(Vehicle[] vehicles) 
         {
-            using (StreamWriter stream = new StreamWriter(OutputFileName))
+            StringBuilder result = new StringBuilder();
+            for (int i = 0; i < vehicles.Length; i++)
             {
-                StringBuilder result = new StringBuilder();
-                for (int i = 0; i < vehicles.Length; i++) 
-                {
-                    Vehicle vehicle = vehicles[i];
-                    result.Append(vehicle.RidesToDo.Count);
-                    vehicle.RidesToDo.ForEach(e => 
-                    {
-                        result.Append(' ' + e);
-                    });
+                Vehicle vehicle = vehicles[i];
+                result.Append(vehicle.RidesToDo.Count)
+                      .Append(" ")
+                      .Append(string.Join(" ", vehicle.RidesToDo))
+                      .Append(Environment.NewLine);
+            }
 
-                    result.AppendLine();
-                }
-
-                stream.WriteLine(result);
+            var fs = new FileStream(OutputFileName, FileMode.Create,
+                                       FileAccess.ReadWrite,
+                                       FileShare.None);
+            using (StreamWriter stream = new StreamWriter(fs))
+            {
+                stream.WriteLine(result.ToString());
             }
         }
     }
