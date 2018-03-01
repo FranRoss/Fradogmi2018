@@ -9,8 +9,7 @@ namespace Fradogmi2018.Entities
 {
     public class InputModel
     {
-
-        public int RowCount 
+        int rows, columns, vehicles, rides, bonus, steps;
 
         public InputModel(string fileName)
         {
@@ -20,7 +19,6 @@ namespace Fradogmi2018.Entities
                 // 3 rows, 4 columns, 2 vehicles, 3 rides, 2 bonus and 10 steps
                 var values = CurrentRow.Split(' ').Select(e => Convert.ToInt32(e)).ToArray();
 
-                int rows, columns, vehicles, rides, bonus, steps;
                 for (int i = 0; i < values.Length; i++)
                 {
 
