@@ -43,6 +43,7 @@
     <Compile Include="Entities\OutputManagerDataList.cs" />
     <Compile Include="Managers\RidesChooser.cs" />
     <Compile Include="Output\OutputWriter.cs" />
+    <Compile Include="Managers\ChangeAppStatus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\b_should_be_easy.in">
