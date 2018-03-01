@@ -9,8 +9,8 @@ namespace Fradogmi2018.Entities
 {
     public class InputModel
     {
-        AppStatus status;
-        Ride[] ridesList;
+        public AppStatus status;
+        public Ride[] ridesList;
 
         public InputModel(string fileName)
         {
