@@ -44,6 +44,7 @@ namespace Fradogmi2018.Entities
                   int bestStart = values[4];
                   int maxEnd = values[5];
                   Ride ride = new Ride(i, startX, startY, endX, endY, bestStart, maxEnd);
+                  ridesList[i] = ride;
                 }
             }
 
