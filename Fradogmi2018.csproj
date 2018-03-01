@@ -41,7 +41,6 @@
     <Compile Include="Managers\ManagersData.cs" />
     <Compile Include="Entities\OutputManagerData.cs" />
     <Compile Include="Entities\OutputManagerDataList.cs" />
-    <Compile Include="Managers\RidesChooser.cs" />
     <Compile Include="Output\OutputWriter.cs" />
     <Compile Include="Managers\ChangeAppStatus.cs" />
   </ItemGroup>
