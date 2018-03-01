@@ -48,6 +48,7 @@ namespace Fradogmi2018.Entities
                 }
             }
 
+            ridesList = ridesList.OrderBy(e => e.BestStart).ToArray();
         }
 
     }

@@ -13,7 +13,7 @@ namespace Fradogmi2018.Entities
         public int PositionY { get; set; } = 0; 
 
 
-        Vehicle(int id, int positionX, int positionY) {
+        public Vehicle(int id, int positionX, int positionY) {
           Id = id;
           PositionX = positionX;
           PositionY = positionY;
