@@ -28,7 +28,7 @@ namespace Fradogmi2018.Entities
           TotalSteps = totalSteps;
         }
 
-        private void removeAvailable(int rideId)
+        public void removeAvailable(int rideId)
         {
             int rideIndex = -0;
             for (int i = 0; i < rides.Length; i++) 

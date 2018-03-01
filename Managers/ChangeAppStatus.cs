@@ -20,6 +20,7 @@ namespace Fradogmi2018.Managers
                 Vehicle currentVehicle = appStatus.vehicles[i];
                 if (currentVehicle.Status == VechicleStatus.Free){
                     IEnumerable<OutputManagerData> foundRide = config.Where(c => c.vehicle.Id == currentVehicle.Id);
+                    if (foundRide.Count() == 0) return;
                     Ride rideToAssign = foundRide.First().ride;
                     if (foundRide.Any()){
                         rideToAssign.isBusy = true;
@@ -44,7 +45,7 @@ namespace Fradogmi2018.Managers
                     {
                         currentVehicle.Status = VechicleStatus.Busy;
                         currentVehicle.RemainingSteps = currentVehicle.currentRide.GetRideLength();
-                    }else (currentVehicle.RemainingSteps == 0 && currentVehicle.Status == VechicleStatus.Busy){
+                    }else if (currentVehicle.RemainingSteps == 0 && currentVehicle.Status == VechicleStatus.Busy){
                         currentVehicle.Status = VechicleStatus.Free;
                         appStatus.removeAvailable(currentVehicle.currentRide.Id);
                     }
