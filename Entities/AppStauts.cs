@@ -12,24 +12,26 @@ namespace Fradogmi2018.Entities
         public int TotalSteps;
         public int RideBonus;
 
-        public Ride[] availables;
-        public List<Ride> completes = new List<Ride>();
+        public Ride[] rides;
+        public Vehicle[] vehicles;
+
+        private List<Ride> completes = new List<Ride>();
 
 
-        public AppStatus(int rows, int columns, int totalVehicles, int totalRides, int rideBonus, int totalSteps)
+        public AppStatus(int rows, int columns, int totalVehicles, int totalRides, int rides, int totalSteps)
         {
           Rows = rows;
           Columns = columns;
           TotalVehicles = totalVehicles;
           TotalRides = totalRides;
-          RideBonus = rideBonus;
+          RideBonus = rides;
           TotalSteps = totalSteps;
         }
 
         public void removeAvailable(int index) 
         {
-            var element = availables[index];
-            Ride[] newArray = RemoveAt(availables, index);
+            var element = rides[index];
+            Ride[] newArray = RemoveAt(rides, index);
 
             completes.Add(element);
 
