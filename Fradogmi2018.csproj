@@ -37,7 +37,7 @@
     <Compile Include="Entities\InputModel.cs" />
     <Compile Include="Entities\AppStauts.cs" />
     <Compile Include="Entities\Vehicle.cs" />
-    <Compile Include="Managers\ManagersData.cs" />
+    <Compile Include="Entities\Ride.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\b_should_be_easy.in">
@@ -52,9 +52,7 @@
     <None Include="Assets\e_high_bonus.in">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Managers\" />
+    <None Include="alex.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
