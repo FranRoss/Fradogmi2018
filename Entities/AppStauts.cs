@@ -31,7 +31,7 @@ namespace Fradogmi2018.Entities
         public void removeAvailable(int index) 
         {
             var element = rides[index];
-            Ride[] newArray = RemoveAt(rides, index);
+            Ride[] newArray = RemoveRide(rides, index);
 
             completes.Add(element);
 

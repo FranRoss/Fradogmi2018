@@ -30,6 +30,7 @@ namespace Fradogmi2018.Output
 
                     result.AppendLine();
                 }
+
                 stream.WriteLine(result);
             }
         }
