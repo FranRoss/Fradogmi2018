@@ -6,11 +6,11 @@ namespace Fradogmi2018.Entities
     public class OutputManagerData
     {
         public Vehicle vehicle;
-        public List<Ride>[] rides;
-        public OutputManagerData(Vehicle vehicle,List<Ride>[] rides)
+        public Ride  ride;
+        public OutputManagerData(Vehicle vehicle,Ride ride)
         {
             this.vehicle = vehicle;
-            this.rides = rides;
+            this.ride = ride;
         }
     }
 }
