@@ -38,5 +38,19 @@
     <Compile Include="Entities\AppStauts.cs" />
     <Compile Include="Entities\Vehicle.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\b_should_be_easy.in">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\c_no_hurry.in">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\d_metropolis.in">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\e_high_bonus.in">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
