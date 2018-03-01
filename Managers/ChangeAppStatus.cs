@@ -22,6 +22,7 @@ namespace Fradogmi2018.Managers
                     IEnumerable<OutputManagerData> foundRide = config.Where(c => c.vehicle.Id == currentVehicle.Id);
                     Ride rideToAssign = foundRide.First().ride;
                     if (foundRide.Any()){
+                        rideToAssign.isBusy = true;
                         if (currentVehicle.PositionX == rideToAssign.StartX && currentVehicle.PositionY == rideToAssign.StartY){
                             currentVehicle.Status = VechicleStatus.Busy;
                             currentVehicle.PositionX = rideToAssign.EndX;
@@ -36,14 +37,16 @@ namespace Fradogmi2018.Managers
                          }
                         currentVehicle.currentRide = rideToAssign;
                     }
+
                 } else {
                     currentVehicle.RemainingSteps--;
                     if (currentVehicle.RemainingSteps == 0 && currentVehicle.Status == VechicleStatus.Transfer)
                     {
                         currentVehicle.Status = VechicleStatus.Busy;
                         currentVehicle.RemainingSteps = currentVehicle.currentRide.GetRideLength();
-                    }else{
+                    }else (currentVehicle.RemainingSteps == 0 && currentVehicle.Status == VechicleStatus.Busy){
                         currentVehicle.Status = VechicleStatus.Free;
+                        appStatus.removeAvailable(currentVehicle.currentRide.Id);
                     }
                 }
             }
