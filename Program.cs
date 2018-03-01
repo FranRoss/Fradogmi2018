@@ -14,7 +14,7 @@ namespace Fradogmi2018
         public static void Main(string[] args)
         {
             InputModel input = new InputModel(easyFile);
-            //for (int i = 0; i < input)
+            for (int i = 0; i < inpu)
         }
     }
 }

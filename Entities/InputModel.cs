@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Fradogmi2018.Entities
 {
     public class InputModel
     {
-        AppStatus status;
-        Ride[] ridesList;
+        public AppStatus status;
+        public Ride[] ridesList;
+        public Vehicle[] vehiclesList;
 
         public InputModel(string fileName)
         {
