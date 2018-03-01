@@ -2,7 +2,7 @@
 namespace Fradogmi2018.Entities {
 
   public class Ride {
-    int Id;
+    public int Id;
 
     public int BestStart;
     public int MaxEnd;
