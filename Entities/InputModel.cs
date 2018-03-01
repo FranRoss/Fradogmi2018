@@ -15,7 +15,9 @@ namespace Fradogmi2018.Entities
         {
             using (StreamReader sr = new StreamReader(fileName))
             {
+                
                 string CurrentRow = sr.ReadLine();
+                Console.Write(CurrentRow);
                 // 3 rows, 4 columns, 2 vehicles, 3 rides, 2 bonus and 10 steps
                 var values = CurrentRow.Split(' ').Select(e => Convert.ToInt32(e)).ToArray();
                 rows = values[0];
