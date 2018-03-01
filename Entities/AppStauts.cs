@@ -37,7 +37,7 @@ namespace Fradogmi2018.Entities
 
         }
 
-        private Ride[] RemoveAt(Ride[] array, int startIndex, int length = 1)
+        private Ride[] RemoveRide(Ride[] array, int startIndex, int length = 1)
         {
 
             if (length < 0)
