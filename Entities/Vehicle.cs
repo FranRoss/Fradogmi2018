@@ -15,6 +15,7 @@ namespace Fradogmi2018.Entities
         public int PositionX { get; set; } = 0;  
         public int PositionY { get; set; } = 0;
         public int RemainingSteps { get; set; } = 0;
+        public Ride currentRide { get; set; } = null;
 
         public List<int> RidesToDo;
 
