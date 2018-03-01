@@ -3,12 +3,12 @@ namespace Fradogmi2018.Entities
 {
     public class AppStatus
     {
-        int Rows;
-        int Columns;
-        int TotalVehicles;
-        int TotalRides;
-        int TotalSteps;
-        int RideBonus;
+        public int Rows;
+        public int Columns;
+        public int TotalVehicles;
+        public int TotalRides;
+        public int TotalSteps;
+        public int RideBonus;
 
         public AppStatus(int rows, int columns, int totalVehicles, int totalRides, int rideBonus, int totalSteps)
         {
