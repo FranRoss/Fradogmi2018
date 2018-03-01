@@ -35,7 +35,13 @@ namespace Fradogmi2018.Entities
                 {
                   string rideString = sr.ReadLine();
                   values = rideString.Split(' ').Select(e => Convert.ToInt32(e)).ToArray();
-                  Ride ride = new Ride();
+                  int startX = values[0];
+                  int startY = values[1];
+                  int endX = values[2];
+                  int endY = values[3];
+                  int bestStart = values[4];
+                  int maxEnd = values[5];
+                  Ride ride = new Ride(i, startX, startY, endX, endY, bestStart, maxEnd);
                 }
             }
 
