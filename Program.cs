@@ -15,31 +15,6 @@ namespace Fradogmi2018
 
         public static void Main(string[] args)
         {
-            List<Vehicle> vehicles = new List<Vehicle>();
-            Vehicle first = new Vehicle(0, 1, 1);
-            first.DoRide(0);
-            first.DoRide(1);
-            first.DoRide(2);
-            first.DoRide(3);
-            Vehicle second = new Vehicle(0, 1, 1);
-            second.DoRide(4);
-            second.DoRide(5);
-            Vehicle third = new Vehicle(0, 1, 1);
-            third.DoRide(6);
-            third.DoRide(7);
-            Vehicle fourth = new Vehicle(0, 1, 1);
-            fourth.DoRide(8);
-            fourth.DoRide(9);
-            fourth.DoRide(10);
-
-            vehicles.Add(first);
-            vehicles.Add(second);
-            vehicles.Add(third);
-            vehicles.Add(fourth);
-
-            OutputWriter output = new OutputWriter("output.txt");
-            output.WriteSolution(vehicles.ToArray());
-
             InputModel input = new InputModel(easyFile);
             for (int i = 0; i < input.status.TotalSteps; i++)
             {

@@ -46,6 +46,21 @@ namespace Fradogmi2018.Entities
                   Ride ride = new Ride(i, startX, startY, endX, endY, bestStart, maxEnd);
                   ridesList[i] = ride;
                 }
+                vehiclesList = new Vehicle[vehicles];
+                for (int i = 0; i < vehicles; i++)
+                {
+                    vehiclesList[i] = new Vehicle()
+                    {
+                        PositionX = 0,
+                        PositionY = 0,
+                        RemainingSteps = 0,
+                        RidesToDo = new List<int>(),
+                        Id = i + 1,
+                        Status = VechicleStatus.Free
+                    };
+                }
+
+
             }
 
             ridesList = ridesList.OrderBy(e => e.BestStart).ToArray();

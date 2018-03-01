@@ -28,7 +28,22 @@ namespace Fradogmi2018.Entities
           TotalSteps = totalSteps;
         }
 
-        public void removeAvailable(int index) 
+        private void removeAvailable(int rideId)
+        {
+            int rideIndex = -0;
+            for (int i = 0; i < rides.Length; i++) 
+            {
+                if(rideId == rides[i].Id) {
+                    rideIndex = i;
+                    break;
+                }
+            }
+
+            removeAvailableIndex(rideIndex);
+
+        }
+
+        public void removeAvailableIndex(int index) 
         {
             var element = rides[index];
             Ride[] newArray = RemoveRide(rides, index);
@@ -36,6 +51,8 @@ namespace Fradogmi2018.Entities
             completes.Add(element);
 
         }
+
+
 
         private Ride[] RemoveRide(Ride[] array, int startIndex, int length = 1)
         {
