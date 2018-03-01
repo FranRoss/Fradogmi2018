@@ -9,7 +9,8 @@ namespace Fradogmi2018.Entities
 {
     public class InputModel
     {
-        int rows, columns, vehicles, rides, bonus, steps;
+        AppStatus status;
+        Ride[] ridesList;
 
         public InputModel(string fileName)
         {
@@ -18,16 +19,21 @@ namespace Fradogmi2018.Entities
                 string CurrentRow = sr.ReadLine();
                 // 3 rows, 4 columns, 2 vehicles, 3 rides, 2 bonus and 10 steps
                 var values = CurrentRow.Split(' ').Select(e => Convert.ToInt32(e)).ToArray();
-                rows = values[0];
-                columns = values[1]; 
-                vehicles = values[2];
-                rides = values[3];
-                bonus = values[4];
-                steps = values[5];
+                
+                int rows = values[0];
+                int columns = values[1]; 
+                int vehicles = values[2];
+                int rides = values[3];
+                int bonus = values[4];
+                int steps = values[5];
+                status = new AppStatus(rows, columns, vehicles, rides, bonus, steps);
 
-                for (int i = 0; i < values.Length; i++)
+                ridesList = new Ride[rides];
+                for (int i = 0; i < rides; i++)
                 {
-
+                  string rideString = sr.ReadLine();
+                  values = rideString.Split(' ').Select(e => Convert.ToInt32(e)).ToArray();
+                  Ride ride = new Ride();
                 }
             }
 
