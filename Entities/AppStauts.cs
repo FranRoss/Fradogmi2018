@@ -1,9 +1,9 @@
 ﻿using System;
 namespace Fradogmi2018.Entities
 {
-    public class AppStauts
+    public class AppStatus
     {
-        public AppStauts()
+        public AppStatus()
         {
         }
     }
