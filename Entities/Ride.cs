@@ -11,6 +11,7 @@ namespace Fradogmi2018.Entities {
     public int StartY;
     public int EndX;
     public int EndY;
+        public bool isBusy = false;
 
     public Ride(int id, int bestStart, int maxEnd, int startX, int startY, int endX, int endY) 
     {
